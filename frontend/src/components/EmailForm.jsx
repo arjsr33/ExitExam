@@ -11,7 +11,7 @@ function EmailForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/send-otp', { email });
+      await axios.post('https://exit-exam-beta.vercel.app/api/send-otp', { email });
       alert('OTP sent to your email');
       setOtpForm(true);
     } catch (error) {

@@ -10,7 +10,7 @@ function OTPForm({ email }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://exit-exam-beta.vercel.app/api/verify-otp', { email, otp });
+      const response = await axios.post('http://localhost:5000/api/verify-otp', { email, otp });
       if (response.data.success) {
         alert('OTP Verified');
         navigate('/welcome');
